@@ -17,6 +17,8 @@ class CreateClotheUserTable extends Migration
             $table->integer('clothe_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->primary(['clothe_id', 'user_id']);
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
