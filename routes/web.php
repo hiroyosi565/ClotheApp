@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/', 'ClotheController@index');
+    Route::get('/clothes/create', 'ClotheController@create');
+    Route::get('/clothes/{clothe}/edit', 'ClotheController@edit');
+    Route::put('/clothes/{clothe}', 'ClotheController@update');
+    Route::delete('/clothes/{clothe}', 'ClotheController@destory');
+    Route::get('/clothes/{clothe}', 'ClotheController@show');
+    Route::post('/clothes', 'ClotheController@store');
+    Route::get('/categories/{category}', 'CategoryController@index');
+
 });
+
+
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

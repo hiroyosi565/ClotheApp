@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Coordinate');
     }
+    
+    public function clothes()   
+    {
+        return $this->hasMany('App\Clothe');  
+    }
 }

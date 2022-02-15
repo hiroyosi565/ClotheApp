@@ -17,6 +17,8 @@ class CreateClotheCoordinateTable extends Migration
             $table->integer('clothe_id')->unsigned();
             $table->integer('coordinate_id')->unsigned();
             $table->primary(['clothe_id', 'coordinate_id']);
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
