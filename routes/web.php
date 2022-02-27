@@ -13,19 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/', 'ClotheController@index');
     Route::get('/clothes/create', 'ClotheController@create');
     Route::get('/clothes/{clothe}/edit', 'ClotheController@edit');
     Route::put('/clothes/{clothe}', 'ClotheController@update');
-    Route::delete('/clothes/{clothe}', 'ClotheController@destory');
+    Route::delete('/clothes/{clothe}', 'ClotheController@delete');
     Route::get('/clothes/{clothe}', 'ClotheController@show');
     Route::post('/clothes', 'ClotheController@store');
     Route::get('/categories/{category}', 'CategoryController@index');
 
 });
-
-
-
-Auth::routes();
+// Route::get('/', 'WeatherAPIController@weatherData'); // 追加
 Route::get('/home', 'HomeController@index')->name('home');

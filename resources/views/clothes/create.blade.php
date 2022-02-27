@@ -9,11 +9,16 @@
     </head>
     <body>
         <h1>ClotheApp</h1>
-        <form action="/clothes" method="POST">
+        
+        <form action="/clothes" method="POST" enctype="multipart/form-data">
             @csrf
+                <!-- アップロードフォームの作成 -->
+            @foreach ($errors->all() as $message) 
+                <p>{{$message}}</p>
+            @endforeach
             <div class="image_path">
-                <h2>画像挿入</h2>
-                <input type="text" name="clothe[image_path]" placeholder="写真追加"/>
+                <h2>写真挿入</h2>
+                <input type="file" name="clothe[image_path]">
             </div>
             <div class="brand">
                 <h2>Brand</h2>
@@ -22,7 +27,7 @@
             </div>
             <div class="favorite">
                 <h2>お気に入り度</h2>
-                <input type="text" name="clothe[favorite]" placeholder="1~4で評価"/>
+                <input type="text" name="clothe[favorite]" placeholder="1~5で評価"/>
             </div>
             <div class="cost">
                 <h2>Cost</h2>

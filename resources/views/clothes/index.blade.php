@@ -8,7 +8,7 @@
         <title>ClotheApp</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+        </head>
     <body>
         <h1>ClotheApp</h1>
         <p class='create'>[<a href='/clothes/create'>追加</a>]</p>
