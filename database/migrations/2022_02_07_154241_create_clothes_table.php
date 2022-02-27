@@ -19,7 +19,7 @@ class CreateClothesTable extends Migration
             $table->integer('cost');
             $table->string('body', 100);
             $table->integer('favorite');
-            $table->string('image_path', 100);
+            $table->string('image_path')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('category_id')->unsigned();
             $table->date('bought_at');

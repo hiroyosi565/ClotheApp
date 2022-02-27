@@ -23,7 +23,7 @@ class ClotheRequest extends FormRequest
             'clothe.favorite' => 'required|integer|max:5',
             'clothe.bought_at' => 'required|date|max:100',
             'clothe.category_id' => 'required|integer|max:5',
-            'clothe.image_path' => 'required|string|max:200',
+            'clothe.image_path' => 'required',
         ];
     }
 }
