@@ -8,13 +8,25 @@ use App\Clothe;
 
 use App\Category;
 
+use App\Weather;
+
 use Storage;
+
+use GuzzleHttp\Client;
 
 class ClotheController extends Controller
 {
-    public function index(Clothe $clothe)
+    public function index(Clothe $clothe,Weather $weather)
     {
-    return view('/clothes/index')->with(['clothes' => $clothe->getPaginateByLimit()]);
+        $tomorrow_weather_data = $weather->weatherData();
+        $tomorrow_weather = $tomorrow_weather_data["timeSeries"][0]["areas"][0]["weathers"][1];
+        $tomorrow_temp_max = $tomorrow_weather_data["timeSeries"][2]["areas"][0]["temps"][1];
+        $tomorrow_temp_min = $tomorrow_weather_data["timeSeries"][2]["areas"][0]["temps"][0];
+        $weathercode = $tomorrow_weather_data["timeSeries"][0]["areas"][0]["weatherCodes"][1];
+        $tomorrow_weathercode = $weather->weatherCode($weathercode);
+        
+    return view('clothes/index')->with(['clothes' => $clothe->getPaginateByLimit(), 'tomorrow_weather' => $tomorrow_weather,
+                                        'tomorrow_temp_max' => $tomorrow_temp_max, 'tomorrow_temp_min' => $tomorrow_temp_min, 'tomorrow_weathercode' => $tomorrow_weathercode]);
     }
     
     public function show(Clothe $clothe)
@@ -60,4 +72,5 @@ class ClotheController extends Controller
         $clothe->fill($input_clothe)->save();
         return redirect('/clothes/' . $clothe->id);
     }
+    
 }

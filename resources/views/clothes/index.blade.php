@@ -11,7 +11,14 @@
         </head>
     <body>
         <h1>ClotheApp</h1>
+        <div class='weathers'>
+            <img src="https://www.jma.go.jp/bosai/forecast/img/{{ $tomorrow_weathercode }}" alt="天気" width="100" height="100">
+            <p class='weather'>天気{{ $tomorrow_weather }}</p>
+            <p class='temp_max'>最高気温：{{ $tomorrow_temp_max }}</p>
+            <p class='temp_min'>最低気温：{{ $tomorrow_temp_min }}</p>
+        </div>
         <p class='create'>[<a href='/clothes/create'>追加</a>]</p>
+        
         <div class='clothes'>
             @foreach ($clothes as $clothe)
                 <div class='clothe'>
