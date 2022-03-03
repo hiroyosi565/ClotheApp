@@ -15,7 +15,7 @@ class Weather extends Model
         // $city = 'Tokyo';
 
         // $url = "$base_url?units=metric&q=$city&APPID=$API_KEY";
-        $url="https://www.jma.go.jp/bosai/forecast/data/forecast/440000.json";
+        $url="https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json";
 
         // 接続
         $client = new Client();
