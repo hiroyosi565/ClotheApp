@@ -12,12 +12,24 @@ use App\Weather;
 
 use Storage;
 
+use Illuminate\Http\Request;
+
 use GuzzleHttp\Client;
 
 class ClotheController extends Controller
 {
-    public function index(Clothe $clothe,Weather $weather)
+    public function index(Clothe $clothe,Weather $weather,Request $request)
     {
+        
+        //検索機能(ブランド名で検索)
+        $keyword = $request->input('keyword');
+        $query = Clothe::query();
+        if (!empty($keyword)) {
+            $query->where('brand', 'LIKE', "%{$keyword}%");
+        }
+        $clothes = $query->paginate(9);
+    
+        // 天気API情報
         $tomorrow_weather_data = $weather->weatherData();
         $tomorrow_weather = $tomorrow_weather_data["timeSeries"][0]["areas"][0]["weathers"][1];
         $tomorrow_temp_max = $tomorrow_weather_data["timeSeries"][2]["areas"][0]["temps"][1];
@@ -25,8 +37,8 @@ class ClotheController extends Controller
         $weathercode = $tomorrow_weather_data["timeSeries"][0]["areas"][0]["weatherCodes"][1];
         $tomorrow_weathercode = $weather->weatherCode($weathercode);
         
-    return view('clothes/index')->with(['clothes' => $clothe->getPaginateByLimit(), 'tomorrow_weather' => $tomorrow_weather,
-                                        'tomorrow_temp_max' => $tomorrow_temp_max, 'tomorrow_temp_min' => $tomorrow_temp_min, 'tomorrow_weathercode' => $tomorrow_weathercode]);
+    return view('clothes/index')->with(['clothes' => $clothes, 'tomorrow_weather' => $tomorrow_weather,
+                                        'tomorrow_temp_max' => $tomorrow_temp_max, 'tomorrow_temp_min' => $tomorrow_temp_min, 'tomorrow_weathercode' => $tomorrow_weathercode, 'keyword' => $keyword]);
     }
     
     public function show(Clothe $clothe)
