@@ -44,6 +44,10 @@
   box-sizing: border-box;
 }
 
+.right {
+  margin-left: auto;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -584,6 +588,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 @media (min-width: 576px) {
   .container-sm,

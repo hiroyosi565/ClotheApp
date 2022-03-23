@@ -25,7 +25,10 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/clothes/{clothe}', 'ClotheController@show');
     Route::post('/clothes', 'ClotheController@store');
     Route::get('/categories/{category}', 'CategoryController@index');
-
+    Route::get('/follow','ClotheController@follow');
 });
 // Route::get('/', 'WeatherAPIController@weatherData'); // 追加
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/users/{user}/follow', 'FollowUserController@follow');
+Route::post('/users/{user}/unfollow', 'FollowUserController@unfollow');
