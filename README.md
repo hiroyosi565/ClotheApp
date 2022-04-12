@@ -1,4 +1,4 @@
-<p align="center"><img src="https://news.p-mom.net/wp-content/uploads/2017/08/123661m.jpg" width="400"></p>
+<p align="center"><img src="https://news.p-mom.net/wp-content/uploads/2017/08/123661m.jpg" width="200" height="200"></p>
 
 # ClotheApp
 
