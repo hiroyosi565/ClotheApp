@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><img src="https://news.p-mom.net/wp-content/uploads/2017/08/123661m.jpg" width="400"></p>
 
 # ClotheApp
 
@@ -12,9 +12,17 @@
 ・MySQL
 ・Bootstrap
 
-##　機能一覧
-<h4>機能</h4>
+## 機能一覧
+<h3>機能</h3>
+・天気登録・服登録機能・服カテゴリー機能・キーワード検索機能・ログイン機能
 
+## 注力した機能や工夫した点
+気象庁のwebAPIを用いて明日の天気を表示させるという天気登録機能の部分に注力しました。また、この機能を実装したことで、明日きていく服を考えることができるといった強みがあります。
 
 ## 使い方
 "クローゼットアプリ"の基本的な使い方
+
+
+## 今後実装していきたいと考える機能
+<p>ユーザーフォロー機能</p>
+<p>セレクト機能</p>
