@@ -13,7 +13,7 @@
 ・Bootstrap
 
 ##　機能一覧
-<p align="center"><img src="file:///Users/andohiroyoshi/Documents/%E3%83%92%E3%82%9A%E3%82%AF%E3%83%81%E3%83%A3/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-04-12%2013.19.14.png" width="400"></p>
+<h4>機能</h4>
 
 
 ## 使い方
