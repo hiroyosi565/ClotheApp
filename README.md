@@ -27,11 +27,11 @@
 "クローゼットアプリ"の基本的な使い方
 まず、アカウントを所有していない場合はアカウント登録をします。
 アカウントを作成したらログインを行い、一覧ページに移動します。
-<p align="center"><img src="スクリーンショット 2022-04-13 13.52.16.png" width=200></p>
-<p align="center"><img src="スクリーンショット 2022-04-13 13.52.47.png" width=200></p>
-<p align="center"><img src="スクリーンショット 2022-04-13 13.49.49.png"></p>
-<p align="right"><img src="スクリーンショット 2022-04-13 13.50.35.png" width=200 height="400"></p>
-<p align="right"><img src="スクリーンショット 2022-04-13 12.53.52.png" width=200 height="400"></p>
+<p align="center"><img src="スクリーンショット 2022-04-13 13.52.16.png" width=400></p>
+<p align="center"><img src="スクリーンショット 2022-04-13 13.52.47.png" width=400></p>
+<p align="center"><img src="スクリーンショット 2022-04-13 13.49.49.png" width=800></p>
+<p align="left"><img src="スクリーンショット 2022-04-13 13.50.35.png" width=200 height="400"></p>
+<p align="center"><img src="スクリーンショット 2022-04-13 12.53.52.png" width=200 height="400"></p>
 <p align="right"><img src="スクリーンショット 2022-04-13 13.51.21.png" width=200 height="400"></p>
 
 
